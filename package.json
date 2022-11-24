@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Hamzakam/NodeFyndHamza/issues"
   },
-  "homepage": "https://github.com/Hamzakam/NodeFyndHamza#readme"
+  "homepage": "https://github.com/Hamzakam/NodeFyndHamza#readme",
+  "dependencies": {
+    "mathjs": "^11.4.0"
+  }
 }

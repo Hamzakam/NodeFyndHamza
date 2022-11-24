@@ -1,5 +1,12 @@
 const fs = require("fs").promises;
 
+/**
+ * Desc:
+ * Takes filepath and returns the content in a string.
+ * Params:
+ * @filepath string
+ *
+ */
 async function readUTF8File(filePath) {
   try {
     const data = await fs.readFile(filePath, "utf-8");
