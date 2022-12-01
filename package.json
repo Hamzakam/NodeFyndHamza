@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/Hamzakam/NodeFyndHamza#readme",
   "dependencies": {
-    "mathjs": "^11.4.0"
+    "dotenv": "^16.0.3",
+    "mathjs": "^11.4.0",
+    "mongodb": "^4.12.1",
+    "mongoose": "^6.7.4"
   }
 }
