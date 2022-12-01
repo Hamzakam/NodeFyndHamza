@@ -3,15 +3,23 @@ const mongodb = require("mongodb");
 const url = "mongodb://localhost:27017";
 const client = new mongodb.MongoClient(url);
 
+/**
+ * connecting to mongodb and running find queries on socialApp db
+ */
 async function run() {
   try {
+    //connecting to client
     await client.connect();
+    //selecting the users Colleciton
     const UserCollection = client.db("socialApp").collection("users");
+    //finding the user collections
     const cursor = UserCollection.find({});
-    console.log("Aggregation query");
+    //iterating over the cursor.
     await cursor.forEach((docs) => {
       console.log(docs);
     });
+    console.log("Aggregation query");
+    //creating an aggregate query
     const aggregate = UserCollection.aggregate([
       {
         $lookup: {
@@ -36,6 +44,7 @@ async function run() {
       },
     ]);
     console.log("Aggregation query");
+    //iterate over the documents from the aggregate
     await aggregate.forEach((docs) => {
       console.log(docs);
     });
