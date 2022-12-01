@@ -8,7 +8,7 @@ async function run() {
     await client.connect();
     const UserCollection = client.db("socialApp").collection("users");
     const cursor = UserCollection.find({});
-    // console.log("Aggregation query");
+    console.log("Aggregation query");
     await cursor.forEach((docs) => {
       console.log(docs);
     });
